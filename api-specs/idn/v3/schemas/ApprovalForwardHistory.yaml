@@ -1,0 +1,29 @@
+type: object
+properties:
+  oldApproverName:
+    type: string
+    description: Display name of approver from whom the approval was forwarded.
+    example: Frank Mir
+  newApproverName:
+    type: string
+    description: Display name of approver to whom the approval was forwarded.
+    example: Al Volta
+  comment:
+    type: string
+    nullable: true
+    description: Comment made while forwarding.
+    example: Forwarding from Frank to Al
+  modified:
+    type: string
+    format: 'date-time'
+    description: Time at which approval was forwarded.
+    example: '2019-08-23T18:52:57.398Z'
+  forwarderName:
+    type: string
+    nullable: true
+    description: Display name of forwarder who forwarded the approval.
+    example: William Wilson
+  reassignmentType:
+    $ref: 'ReassignmentType.yaml'
+    description: Type of approval reassignment.
+    example: AUTOMATIC_REASSIGNMENT
